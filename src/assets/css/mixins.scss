@@ -1,0 +1,129 @@
+@mixin col {
+  @media (max-width: 576px) {
+    @content;
+  }
+}
+
+@mixin sm {
+  @media (max-width: 767px) {
+    @content;
+  }
+}
+
+@mixin md-minus {
+  @media (max-width: 991px) {
+    @content;
+  }
+}
+
+@mixin md {
+  @media (max-width: 992px) {
+    @content;
+  }
+}
+
+@mixin lg-minus {
+  @media (max-width: 1199px) {
+    @content;
+  }
+}
+
+@mixin lg {
+  @media (max-width: 1200px) {
+    @content;
+  }
+}
+
+@mixin extra {
+  @media (max-width: 1400px) {
+    @content;
+  }
+}
+
+@mixin xl {
+  @media (min-width: 1200px) {
+    @content;
+  }
+}
+
+
+@mixin font ($font-family, $font-size, $color) {
+  font-family: $font-family;
+  font-size: $font-size;
+  color: $color;
+}
+
+@mixin ellipsis ($line) {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: $line;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+  white-space: normal;
+}
+
+@mixin font-size {
+  font-size: 18px;
+
+  @include lg {
+    font-size: 16px;
+  }
+}
+
+@mixin prev {
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  top: 50%;
+  left: -20px;
+  background-color: white;
+  color: #464646;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+  z-index: 9;
+
+  // @include r(1530) {
+  //   left: -15px;
+  // }
+
+  // @include r(576) {
+  //     display: none !important;
+  // }
+
+  &::before {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f104";
+    color: #464646;
+    font-size: 25px;
+    opacity: 1;
+  }
+}
+
+@mixin next {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  top: 50%;
+  right: -20px;
+  z-index: 9;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+  background-color: white;
+  // @include r(1530) {
+  //   right: -15px;
+  // }
+
+  // @include r(576) {
+  //     display: none !important;
+  // }
+
+  &::before {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f105";
+    color: #464646;
+    font-size: 25px;
+    opacity: 1;
+  }
+}

@@ -1,0 +1,345 @@
+@import './common.scss';
+@import './title.scss';
+@import './section.scss';
+@import './clubs.scss';
+@import './testimonials.scss';
+@import './footer.scss';
+
+.welcome {
+  background: #666 url('../images/welcome.jpg') center;
+  background-size: cover;
+  height: 500px;
+  position: relative;
+  margin-bottom: 160px;
+
+  @include sm {
+    height: auto;
+    margin-bottom: 0;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .4);
+  }
+}
+
+.welcome-content {
+  z-index: 1;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -125px;
+
+  @include sm {
+    position: relative;
+    margin-top: 70px;
+    bottom: 0;
+  }
+
+  @include col {
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  .welcome-title {
+    text-align: center;
+    margin-bottom: 100px;
+
+    @include sm {
+      margin-bottom: 50px;
+    }
+
+    h1 {
+      color: white;
+      font-size: 50px;
+      letter-spacing: 2px;
+
+      @include sm {
+        font-size: 30px;
+        margin-bottom: 8px;
+      }
+    }
+
+    p {
+      color: white;
+      font-size: 20px;
+
+      @include sm {
+        font-size: 16px;
+      }
+    }
+  }
+
+
+  .services {
+    margin-top: 20px;
+    background-color: white;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    padding: 10px;
+
+    @include sm {
+      grid-template-columns: 1fr;
+    }
+
+    .item {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      border: 1px solid #CCCCCC;
+      border-radius: 3px;
+      padding: 30px;
+      font-size: 20px;
+
+      @include md {
+        padding: 22px 10px;
+      }
+
+      @include sm {
+        flex-direction: row;
+        font-size: 16px;
+      }
+
+      @include col {
+        padding: 10px;
+      }
+
+      span {
+        padding: 15px 25px 22px;
+        color: black;
+        text-align: center;
+      }
+
+      i {
+        color: $mainColor;
+        font-size: 28px;
+      }
+    }
+  }
+}
+
+.sports {
+  h2 {
+    margin: 0;
+  }
+}
+
+.sport-types {
+  @include col {
+    overflow: hidden;
+  }
+
+  .slick-arrow {
+    @include col {
+      display: none !important;
+    }
+  }
+
+  .slick-prev {
+    @include prev;
+  }
+
+  .slick-next {
+    @include next;
+  }
+
+  .slick-list {
+    padding-top: 30px;
+    margin: 0 -20px;
+
+    @include col {
+      margin: 0 -10px;
+    }
+
+    .slick-slide {
+      margin: 0 20px;
+
+      @include col {
+        margin: 0 10px;
+      }
+    }
+
+  }
+
+  a {
+    position: relative;
+
+    &:focus {
+      outline: unset;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, .3);
+      border-radius: 3px;
+    }
+
+    img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      border-radius: 3px;
+
+      @include sm {
+        height: 200px;
+      }
+    }
+
+    span {
+      color: white;
+      @include font-size;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: 25px;
+    }
+  }
+}
+
+.for-owners {
+  background-image: url('../images/owners.jpg');
+  background-size: cover;
+  padding: 100px 0;
+  position: relative;
+
+  @include md {
+    padding: 70px 0;
+  }
+
+  @include sm {
+    padding: 50px 0;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .5);
+  }
+
+  .title {
+    color: white;
+    font-size: 52px;
+    line-height: 57px;
+
+    @include sm {
+      font-size: 30px;
+    }
+
+    @include sm {
+      line-height: unset;
+    }
+  }
+
+  a {
+    @include md {
+      margin-top: 30px;
+    }
+  }
+
+  .our-service {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include md {
+      justify-content: flex-start;
+      padding-left: 15px;
+      padding-top: 30px;
+    }
+
+    ul {
+      li {
+        color: white;
+        @include font-size;
+        margin-bottom: 30px;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+
+}
+
+.all-sports {
+  h2 {
+    margin: 0;
+  }
+
+  nav {
+    margin-top: 30px;
+    background-color: #f2f4f6;
+    display: flex;
+  }
+
+  .nav-link {
+    flex: 1;
+    text-align: center;
+    text-decoration: none;
+    padding: .5rem;
+    border-bottom: 1px solid lightgray;
+    color: black;
+    @include font-size;
+  }
+
+  .nav-link:hover {
+    border-bottom-color: rgba(0, 0, 0, .05);
+  }
+
+  .nav-link.active {
+    border-bottom: 2px solid $secondaryColor;
+  }
+
+  .tab-content {
+    margin-top: 20px;
+  }
+
+  .tab {
+    display: none;
+    column-count: 3;
+    column-gap: 10px;
+
+    @include sm {
+      column-count: 2;
+    }
+
+    a {
+      display: block;
+      margin-bottom: 15px;
+      color: black;
+    }
+  }
+
+  .tab.active {
+    display: block;
+  }
+}
+
+.mobile-scroll {
+  flex-wrap: nowrap;
+  overflow-y: auto;
+
+  .col-lg-3 {
+    @include col {
+      flex: 0 0 80%;
+      max-width: 80%;
+    }
+  }
+}

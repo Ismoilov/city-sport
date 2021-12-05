@@ -1,0 +1,26 @@
+
+.title{
+	div.top{
+		display: flex;
+    justify-content: space-between;
+    align-items: center;
+    h2 {
+			color: #303f41;
+			margin-bottom: 11px;
+			margin-top: 0;
+		}
+	}
+	
+	hr{
+		border: 0;
+    height: 1px;
+		background-color: #6153cc70;
+		margin: 0;
+	}
+	hr.bold{
+		margin-top: -2.5px;
+    background-color: #6153cc;
+    width: 300px;
+    height: 3px;
+	}
+}

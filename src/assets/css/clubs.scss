@@ -1,0 +1,55 @@
+.clubs {
+  
+  .club-card {
+    cursor: pointer;
+    color: unset;
+    position: relative;
+    display: block;
+
+    @include md {
+      margin-bottom: 30px;
+    }
+
+    .price {
+      top: 30px;
+      position: absolute;
+      background-color: orchid;
+      padding: 5px 12px;
+      left: 0;
+      color: white;
+    }
+
+    img {
+      height: 220px;
+      width: 100%;
+      object-fit: cover;
+      background-color: #eee;
+    }
+
+    .stars {
+      margin-bottom: 30px;
+      margin-top: -40px;
+      padding-left: 10px;
+      font-size: 15px;
+      color: white;
+
+      i.gold {
+        color: gold;
+      }
+    }
+
+    h3 {
+      margin-top: 7px;
+      margin-bottom: 7px;
+      font-size: 17px;
+    }
+
+    span {
+      font-size: 14px;
+
+      i {
+        color: orchid;
+      }
+    }
+  }
+}

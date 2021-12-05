@@ -1,0 +1,49 @@
+@import './common.scss';
+@import './footer.scss';
+
+.contacts-page {
+  margin-top: 80px;
+  min-height: 72vh;
+
+  @include col {
+    padding-bottom: 30px;
+  }
+
+  a {
+    color: blue;
+    margin-top: 8px;
+    display: block;
+  }
+
+  .wrapper {
+    display: flex;
+
+    @include sm {
+      flex-direction: column;
+    }
+  }
+
+  .social-wrapper {
+    display: flex;
+
+    a {
+      color: $mainColor;
+      margin-right: 20px;
+      font-size: 30px;
+    }
+  }
+
+  .left {
+    margin: 0 auto;
+
+    @include sm {
+      margin: unset;
+    }
+
+    h2 {
+      @include col {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

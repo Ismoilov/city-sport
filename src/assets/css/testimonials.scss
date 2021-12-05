@@ -1,0 +1,70 @@
+.testimonials {
+  .tes-carousel {
+    box-shadow: 0 0 30px 0.5px #da70d659;
+
+    .slick-slide {
+      border-radius: 10px;
+    }
+  }
+
+}
+
+.tes-card {
+  // box-shadow: inset 0 0 5px 0.1px orchid;
+  // box-shadow: inset 0 0 10px orchid,
+  //   0 0 10px orchid;
+
+  padding: 26px 30px;
+  background-color: white;
+
+
+  .tes-text {
+    margin-bottom: 34px;
+    font-size: 16px;
+    color: #332532;
+    height: 100px;
+    overflow: hidden;
+  }
+
+  .tes-detail {
+    .author {
+      color: #ffac15;
+      font-size: 16px;
+      display: block;
+    }
+
+    .middle-text {
+      color: grey;
+      font-size: 14px;
+      display: block;
+    }
+
+    a {
+      font-size: 16px;
+      text-decoration: underline;
+    }
+  }
+}
+
+.tes-controls {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  font-size: 39px;
+  color: #ff6868;
+
+  @include sm {
+    display: none;
+  }
+
+  .up {
+    margin-bottom: 25px;
+    cursor: pointer;
+  }
+
+  .down {
+    cursor: pointer;
+  }
+}
